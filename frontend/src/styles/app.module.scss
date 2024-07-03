@@ -1,0 +1,410 @@
+@keyframes slideDown {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes toggle {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(15deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(-15deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  95%,
+  100% {
+    transform: rotate(0deg);
+  }
+  96%,
+  98% {
+    transform: rotate(-3deg);
+  }
+  97%,
+  99% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingCircle {
+  animation: spin 2s linear infinite;
+}
+
+.navbar {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.logo {
+  animation: toggle 1000ms ease-in-out;
+}
+
+.logoWrapper {
+  min-width: 206px;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px;
+}
+
+.actionButton {
+  cursor: pointer;
+  width: fit-content;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  max-height: 44px;
+  animation: shake 3s ease-in-out infinite;
+  font-size: 20px !important;
+  background-color: var(--background-color);
+  &:hover {
+    background-color: #161616;
+    color: #e4efd9;
+  }
+}
+
+.listItem {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+.header {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideDown 1.5s ease forwards;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.mHeader {
+  padding-bottom: 280px;
+  animation: slideDown 1.5s ease forwards;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.navbar {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.seitter {
+  z-index: 10;
+}
+
+.seitterWrapper {
+  display: block;
+  margin-top: 110px;
+  position: relative;
+}
+
+.woofBlock {
+  position: relative;
+  padding-top: 520px;
+  background-color: var(--orange);
+  z-index: 0;
+}
+
+.woofWrapper {
+  width: 33vw;
+  min-width: 605px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+}
+
+.woofButton {
+  width: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--black);
+  color: var(--background-color);
+  font-size: 20px;
+  margin-bottom: 100px;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #555;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.errorText {
+  align-self: flex-start;
+  font-size: 12px;
+  color: var(--black);
+  margin-left: 5px;
+}
+
+.woofForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.woofInput {
+  width: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.woofCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.inputError {
+  border: 2px solid red;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 102px 20px;
+}
+
+.contactsText {
+  max-height: 20px;
+  margin: 0px;
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  left: 90px;
+}
+
+.burgerIcon {
+  width: 56px;
+  height: 56px;
+}
+
+.contactsPic {
+  background-color: transparent;
+  border: 2px solid var(--black);
+  border-radius: var(--borderRadius);
+  padding: 12px;
+  font-family: var(--font-family);
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.contactsWrapper {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  max-width: 1150px;
+}
+
+@media (max-width: 1150px) {
+  .contactsIcon {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    font-size: 28px; /* Уменьшите размер шрифта */
+  }
+  .mHeader {
+    width: 90vw; /* Уменьшите размер логотипа */
+  }
+  .seitter {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 920px) {
+  .seitter {
+    transform: translate(-45%, -55%) !important;
+  }
+  .actionButton {
+    font-size: 16px !important;
+  }
+  .logoWrapper {
+    min-width: 103px;
+  }
+}
+
+@media (max-width: 768px) {
+  .seitter {
+    transform: translate(-45%, -65%) !important;
+  }
+
+  .woofBlock {
+    padding-top: 420px;
+  }
+}
+
+@media (max-width: 707px) {
+  .seitter {
+    transform: translate(-45%, -73%) !important;
+  }
+  .header {
+    font-size: 20px;
+  }
+
+  .seitterWrapper {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .seitter {
+    transform: translate(-45%, -80%) !important;
+  }
+
+  .contactsText {
+    display: none;
+  }
+
+  .contactsPic {
+    width: fit-content;
+  }
+
+  .contactsWrapper {
+    justify-content: space-around;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .actionButton {
+    padding: 10px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .woofBlock {
+    padding-top: 220px;
+  }
+
+  .woofWrapper {
+    width: 90vw;
+    min-width: 420px;
+  }
+
+  .woofHeader {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 570px) {
+  .seitter {
+    transform: translate(-45%, -88%) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .seitter {
+    transform: translate(-45%, -96%) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .seitter {
+    transform: translate(-45%, -105%) !important;
+  }
+
+  .woofBlock {
+    padding-top: 120px;
+  }
+
+  .woofWrapper {
+    width: 90vw;
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 460px) {
+  .seitter {
+    transform: translate(-45%, -112%) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .seitter {
+    transform: translate(-45%, -122%) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .seitterWrapper {
+    margin-top: 30px;
+  }
+  .seitter {
+    transform: translate(-45%, -135%) !important;
+  }
+}
+
+@media (max-width: 340px) {
+  .seitterWrapper {
+    margin-top: 30px;
+  }
+  .seitter {
+    transform: translate(-45%, -145%) !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .seitter {
+    transform: translate(-45%, -155%) !important;
+  }
+}

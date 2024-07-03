@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts"
+  },
+  "dependencies": {
+    "@cosmjs/proto-signing": "^0.32.3",
+    "@elysiajs/cron": "^1.0.3",
+    "@elysiajs/html": "^1.0.2",
+    "@elysiajs/static": "^1.0.2",
+    "@elysiajs/stream": "^1.0.2",
+    "@elysiajs/swagger": "^1.0.3",
+    "@gtrabanco/elysia-hmr-html": "1.0.0",
+    "@jackallabs/jackal.js-protos": "^1.4.1",
+    "@jackallabs/jackal.nodejs": "^1.0.2",
+    "@kitajs/ts-html-plugin": "^4.0.1",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}

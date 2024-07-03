@@ -1,0 +1,26 @@
+{
+  "name": "seitters",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "@react-spring/parallax": "^9.7.3",
+    "@react-spring/web": "^9.7.3",
+    "add": "^2.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "sass": "^1.74.1"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.5.7",
+    "@rsbuild/plugin-react": "^0.5.7",
+    "@types/react": "^18.2.71",
+    "@types/react-dom": "^18.2.22",
+    "typescript": "^5.4.2"
+  }
+}

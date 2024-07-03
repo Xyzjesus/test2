@@ -1,0 +1,29 @@
+body {
+  margin: auto;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+:root {
+  --font-family: "NKDuyMono", serif;
+  --heading-font: "Alinsa", san-serif;
+  --background-color: #e4efd9;
+  --black: #161616;
+  --orange: #ec6e38;
+  --borderRadius: 8px;
+}
+
+@font-face {
+  font-family: "NKDuyMono";
+  src: local("NKDuyMono"),
+    url("../public/fonts/NKDuyMono-Bold.woff2") format("woff2"),
+    url("../public/fonts/NKDuyMono-Bold.otf") format("otf"),
+    url("../public/fonts/NKDuyMono-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Alinsa";
+  src: local("Alinsa"), url("../public/fonts/Alinsa.ttf") format("ttf"),
+    url("../public/fonts/Alinsa.otf") format("otf");
+}
